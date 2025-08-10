@@ -1,0 +1,17 @@
+Após o carregamento da instalação do Airflow, podemos iniciá-lo localmente, mas, antes,
+precisamos exportar a variável de ambiente Airflow Home.
+A exportaremos com o diretório no qual instalamos o Airflow, ou seja, o caminho da localização.
+Vale ressaltar que é necessário exportá-la sempre que formos executar o Airflow
+
+>>> export AIRFLOW_HOME=~/<Caminho da sua pasta> <<<
+exemplo:(export AIRFLOW_HOME=~//home/usuario_ubuntu_20/Documentos/airflow)
+
+Agora, podemos executar o comando responsável por iniciar o banco de dados padrão do Airflow, 
+criar um novo usuário e senha para que possamos acessá-lo, e executar os dois principais serviços do Airflow:
+
+>>> airflow standalone <<<
+
+
+No navegador(google, mozila etc..), acessaremos <"localhost:8080">, 
+e logaremos com o USUÁRIO e SENHA que nos foram fornecidos para acessar a interface do Airflow.
+

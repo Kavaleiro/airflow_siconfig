@@ -1,0 +1,21 @@
+Caso se use o sistema Linux ou wsl Ubuntu, após fazer todas as atualizações necessárias no mesmo.
+"" ativar o repositório do Ubuntu, que permite que tenhamos diferentes versões do Pyhton
+em uma mesma máquina, através deste comando:""
+>>>>>  sudo add-apt-repository ppa:deadsnakes/ppa <<<<<
+
+LOGO APOS 
+>>>> sudo apt install python3.9 <<<<
+
+Depois desses 2 últimos procedimentos iremos criar um VENV
+>>>> sudo apt install python3.9-venv <<<
+(OBS: como estou utilizando um sistema Linux,
+ é usado o "sudo" entre outras ferramentas para acessar, modificar pastas ou programas )
+
+INSTALANDO O AIRFLOW
+*Com o "venv" ativado
+Utilizaremos o pacote pip, do Python, para instalá-lo e passaremos a versão desejada, <2.3.2>.
+Em seguida, passaremos o arquivo de restrição, que especifica todas as versões das bibliotecas 
+que o Airflow precisa para funcionar corretamente, então adicionaremos --constraint 
+e a url que direciona para este arquivo.
+
+>>> pip install 'apache-airflow==2.3.2' --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-2.3.2/constraints-3.9.txt" <<<
